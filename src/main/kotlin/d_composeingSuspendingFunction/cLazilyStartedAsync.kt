@@ -15,6 +15,11 @@ import kotlin.system.*
  * # 모르겠음.
  *  The use-case for async(start = CoroutineStart.LAZY) is a replacement for the standard lazy function in cases when computation of the value involves suspending functions.
  *
+ * CoroutineStart : https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-start/
+ * CoroutineStart.DEFAULT : 기본값 : 해당 콘텍스에 따라서 즉시 시작 됩니다.
+ * CoroutineStart.LAZY : 시작이 필요 할때 까지 - await 나 명시적으로 start를 시작 했을 때 만 시작한다.
+ * CoroutineStart.ATOMIC : 코루틴 컨텍스트에 따라 취소  되지 않는 방식으로 원자성을 가집니다.
+ * CoroutineStart.UNDISPATCHED :  즉시 시작하여 현재 쓰레드의 첫번쨰 서스펜딩 포인트까지 실행 됩니다.,
  */
 fun main() = runBlocking<Unit> {
     //sampleStart
